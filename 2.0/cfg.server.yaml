@@ -1,0 +1,8 @@
+package: oscp_v20
+output: server.gen.go
+generate:
+  models: true
+  gin-server: true
+output-options:
+  # to make sure that all types are generated
+  skip-prune: true

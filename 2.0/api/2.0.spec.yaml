@@ -1,0 +1,1579 @@
+openapi: 3.1.0
+info:
+  title: OSCP API Specification
+  description: OSCP API Specification
+  version: 1.0.0
+
+paths:
+  /oscp/fp/2.0/register:
+    post:
+      operationId: registerFlexibilityProvider
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/Registration'
+      responses:
+        '204':
+          description: No content
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+    put:
+      operationId: updateRegistrationFlexibilityProvider
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/Registration'
+      responses:
+        '204':
+          description: No content
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+    delete:
+      operationId: unregisterFlexibilityProvider
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/Registration'
+      responses:
+        '204':
+          description: No content
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+  /oscp/cp/2.0/register:
+    post:
+      operationId: registerCapacityProvider
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/Registration'
+      responses:
+        '204':
+          description: No content
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+    put:
+      operationId: updateRegistrationCapacityProvider
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/Registration'
+      responses:
+        '204':
+          description: No content
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+    delete:
+      operationId: unregisterCapacityProvider
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/Registration'
+      responses:
+        '204':
+          description: No content
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+  /oscp/co/2.0/register:
+    post:
+      operationId: registerCapacityOptimizer
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/Registration'
+      responses:
+        '204':
+          description: No content
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+    put:
+      operationId: updateRegistrationCapacityOptimizer
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/Registration'
+      responses:
+        '204':
+          description: No content
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+    delete:
+      operationId: unregisterCapacityOptimizer
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/Registration'
+      responses:
+        '204':
+          description: No content
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+  /oscp/fp/2.0/handshake:
+    post:
+      operationId: handshakeFlexibilityProvider
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/Handshake'
+      responses:
+        '204':
+          description: No content
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+  /oscp/fp/2.0/handshake_acknowledge:
+    post:
+      operationId: handshakeAcknowledgeFlexibilityProvider
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/HandshakeAcknowledge'
+      responses:
+        '204':
+          description: No content
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+  /oscp/co/2.0/handshake:
+    post:
+      operationId: handshakeCapacityOptimizer
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/Handshake'
+      responses:
+        '204':
+          description: No content
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+  /oscp/cp/2.0/handshake_acknowledge:
+    post:
+      operationId: handshakeAcknowledgeCapacityProvider
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/HandshakeAcknowledge'
+      responses:
+        '204':
+          description: No content
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+  /oscp/fp/2.0/heartbeat:
+    post:
+      operationId: heartbeatFlexibilityProvider
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/Heartbeat'
+      responses:
+        '204':
+          description: No content
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+  /oscp/cp/2.0/heartbeat:
+    post:
+      operationId: heartbeatCapacityProvider
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/Heartbeat'
+      responses:
+        '204':
+          description: No content
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+  /oscp/co/2.0/heartbeat:
+    post:
+      operationId: heartbeatCapacityOptimizer
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/Heartbeat'
+      responses:
+        '204':
+          description: No content
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+  /oscp/fp/2.0/update_group_capacity_forecast:
+    post:
+      operationId: updateGroupCapacityForecastFlexibilityProvider
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/UpdateGroupCapacityForecast'
+      responses:
+        '204':
+          description: No content
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+
+  /oscp/co/2.0/update_group_capacity_forecast:
+    post:
+      operationId: updateGroupCapacityForecastCapacityOptimizer
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/UpdateGroupCapacityForecast'
+      responses:
+        '204':
+          description: No content
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+
+  /oscp/cp/2.0/adjust_group_capacity_forecast:
+    post:
+      operationId: adjustGroupCapacityForecastCapacityProvider
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/AdjustGroupCapacityForecast'
+      responses:
+        '204':
+          description: No content
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+  /oscp/cp/2.0/group_capacity_compliance_error:
+    post:
+      operationId: groupCapacityComplianceErrorCapacityProvider
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/GroupCapacityComplianceError'
+      responses:
+        '204':
+          description: No content
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+
+  /oscp/cp/2.0/update_group_measurements:
+    post:
+      operationId: updateGroupMeasurementsCapacityProvider
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/UpdateGroupMeasurements'
+      responses:
+        204:
+          description: No content
+        400:
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        404:
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        500:
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+        501:
+          description: Not implemented
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+  /oscp/co/2.0/update_asset_measurements:
+    post:
+      operationId: updateAssetMeasurementsCapacityOptimizer
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/Authorization'
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: '#/components/headers/X-Request-ID'
+        - name: X-Correlation-ID
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Correlation-ID'
+        - name: X-Segment-Index
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Index'
+        - name: X-Segment-Count
+          in: header
+          required: false
+          schema:
+            $ref: '#/components/headers/X-Segment-Count'
+      requestBody:
+        $ref: '#/components/requestBodies/UpdateAssetMeasurements'
+      responses:
+        204:
+          description: No content
+        400:
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        404:
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+        500:
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+        501:
+          description: Not implemented
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+
+components:
+
+  headers:
+    Authorization:
+      description: Authorization header
+      schema:
+        type: string
+      required: true
+    X-Request-ID:
+      description: Unique request ID of this message.
+      schema:
+        type: string
+      required: true
+    X-Correlation-ID:
+      description: Reference to a request ID that this message is a response to.
+      schema:
+        type: string
+      required: false
+
+    X-Segment-Index:
+      description: Index of the segment in the message.
+      schema:
+        type: integer
+      required: false
+
+    X-Segment-Count:
+      description: Total number of segments in the message.
+      schema:
+        type: integer
+      required: false
+
+  schemas:
+
+    ErrorBody:
+      type: object
+      properties:
+        message:
+          type: string
+
+    VersionURL:
+      type: object
+      properties:
+        version:
+          type: string
+          required: true
+          description: Version of the API
+        base_url:
+          type: string
+          required: true
+          description: Base URL of the API
+
+    RequiredBehaviour:
+      type: object
+      properties:
+        heartbeat_interval:
+          type: integer
+          required: false
+          description: |
+            The interval (in seconds) in which the
+            sender of this response expects heartbeats to
+            receive. If provided, value must be 1 or higher.
+            If the sender is not interested in the heartbeat
+            of the receiver, this field can be omitted.
+
+        measurement_configuration:
+          type: array
+          required: false
+          description: |
+            For determining how measurements are
+            aggregated. Providing multiple configurations
+            is allowed. An empty array represents no
+            configurations.
+          items:
+            $ref: '#/components/schemas/MeasurementConfiguration'
+
+    MeasurementConfiguration:
+      type: string
+      enum:
+        - 'CONTINUOUS'
+        - 'INTERMITTENT'
+
+    Heartbeat:
+      type: object
+      properties:
+        offline_mode_at:
+          type: string
+          format: date-time
+          required: false
+          description: |
+            A time in the future that indicates when, in case no more heartbeat
+            messages are received, it can be assumed the receiving party is
+            offline (unavailable). This time SHOULD be updated with every
+            heartbeat message.
+
+    Registration:
+      schema:
+        type: object
+        properties:
+          token:
+            type: string
+            required: true
+          version_url:
+            type: array
+            items:
+              schema:
+                $ref: '#/components/schemas/VersionURL'
+            required: true
+
+    CapacityForecastType:
+      type: string
+      enum:
+        - 'CONSUMPTION'
+        - 'GENERATION'
+        - 'FALLBACK_CONSUMPTION'
+        - 'FALLBACK_GENERATION'
+        - 'OPTIMUM'
+
+    ForecastedBlockUnit:
+      type: string
+      enum:
+        - 'A'
+        - 'W'
+        - 'KW'
+        - 'WH'
+        - 'KWH'
+
+    PhaseIndicator:
+      type: string
+      enum:
+        - 'UNKNOWN'
+        - 'ONE'
+        - 'TWO'
+        - 'THREE'
+        - 'ALL'
+
+    ForecastedBlock:
+      type: object
+      properties:
+        capacity:
+          type: string
+          required: true
+        phase:
+          $ref: '#/components/schemas/PhaseIndicator'
+          required: true
+        unit:
+          $ref: '#/components/schemas/ForecastedBlockUnit'
+          required: true
+        end_time:
+          type: string
+          format: date-time
+          required: true
+        start_time:
+          type: string
+          format: date-time
+          required: true
+
+    GroupCapacityForecast:
+      schema:
+        type: object
+        properties:
+          group_id:
+            type: string
+            required: true
+          forecasted_blocks:
+            type: array
+            required: true
+            items:
+              $ref: '#/components/schemas/ForecastedBlock'
+          type:
+            $ref: '#/components/schemas/CapacityForecastType'
+            required: true
+
+    GroupComplianceError:
+      type: object
+      properties:
+        message:
+          type: string
+          required: true
+        forecasted_blocks:
+          type: array
+          required: false
+          items:
+            $ref: '#/components/schemas/ForecastedBlock'
+
+    UpdateGroupMeasurements:
+      type: object
+      properties:
+        group_id:
+          type: string
+          required: true
+        measurements:
+          type: array
+          required: true
+          items:
+            $ref: '#/components/schemas/EnergyMeasurement'
+
+    UpdateAssetMeasurements:
+      group_id:
+        type: string
+        required: true
+      measurements:
+        type: array
+        required: true
+        items:
+          $ref: '#/components/schemas/AssetMeasurement'
+
+    EnergyMeasurement:
+      type: object
+      properties:
+        value:
+          type: number
+          format: double
+          required: true
+        phase:
+          $ref: '#/components/schemas/PhaseIndicator'
+          required: true
+        unit:
+          $ref: '#/components/schemas/EnergyMeasurementUnit'
+          required: true
+        energy_type:
+          $ref: '#/components/schemas/EnergyType'
+          required: false
+        direction:
+          $ref: '#/components/schemas/EnergyFlowDirection'
+          required: true
+        measure_time:
+          type: string
+          format: date-time
+          required: true
+        initial_measure_time:
+          type: string
+          format: date-time
+          required: false
+
+    EnergyFlowDirection:
+      type: string
+      enum:
+        - 'NET'
+        - 'IMPORT'
+        - 'EXPORT'
+
+    EnergyType:
+      type: string
+      enum:
+        - 'FLEXIBLE'
+        - 'NONFLEXIBLE'
+        - 'TOTAL'
+
+    EnergyMeasurementUnit:
+      type: string
+      enum:
+        - 'WH'
+        - 'KWH'
+
+    AssetMeasurement:
+      properties:
+        asset_id:
+          type: string
+          required: true
+        asset_category:
+          type: string
+          required: true
+        energy_measurement:
+          type: object
+          schema:
+            $ref: '#/components/schemas/EnergyMeasurement'
+          required: false
+        instantaneous_measurement:
+          type: object
+          schema:
+            $ref: '#/components/schemas/InstantaneousMeasurement'
+          required: false
+    AssetCategory:
+      type: string
+      enum:
+        - 'CHARGING'
+        - 'GENERATION'
+        - 'STORAGE'
+        - 'CONSUMPTION'
+
+    InstantaneousMeasurement:
+      type: object
+      properties:
+        value:
+          type: number
+          format: double
+          required: true
+        phase:
+          $ref: '#/components/schemas/PhaseIndicator'
+          required: true
+        unit:
+          $ref: '#/components/schemas/InstantaneousMeasurementUnit'
+          required: true
+        measure_time:
+          type: string
+          format: date-time
+          required: true
+
+    InstantaneousMeasurementUnit:
+      type: string
+      enum:
+        - 'A'
+        - 'W'
+        - 'KW'
+        - 'WH'
+        - 'KWH'
+
+  requestBodies:
+
+    Registration:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Registration'
+
+    Handshake:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RequiredBehaviour'
+
+    HandshakeAcknowledge:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RequiredBehaviour'
+
+
+    Heartbeat:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Heartbeat'
+
+    UpdateGroupCapacityForecast:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GroupCapacityForecast'
+
+    AdjustGroupCapacityForecast:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GroupCapacityForecast'
+
+    GroupCapacityComplianceError:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GroupComplianceError'
+
+    UpdateGroupMeasurements:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UpdateGroupMeasurements'
+
+    UpdateAssetMeasurements:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UpdateAssetMeasurements'
+
+  responses:
+    204:
+      description: No content
+
+    400:
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorBody'
+
+    404:
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorBody'
+
+    500:
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorBody'
+
+    501:
+      description: Not implemented
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorBody'
