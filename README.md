@@ -15,5 +15,5 @@ a compatible HTTP API server.
 ## Usage
 
 ```go
-import OICP "https://github.com/ChargePi/oscp/<oscp-version>"
+import "github.com/ChargePi/oscp/<oscp-version>"
 ```
