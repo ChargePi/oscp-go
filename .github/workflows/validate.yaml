@@ -27,4 +27,4 @@ jobs:
       - name: Swagger Editor Validator
         uses: char0n/swagger-editor-validate@v1.4.0
         with:
-          definition-file: ./2.0/api/2.0.spec.yml
+          definition-file: ./2.0/api/2.0.spec.yaml
