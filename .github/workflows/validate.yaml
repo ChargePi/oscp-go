@@ -15,10 +15,9 @@ on:
 
   workflow_dispatch:
 
-
 jobs:
-  validate-oicp-v230-specification:
-    name: "Validate the OICP 2.3.0 OpenAPI specification"
+  validate-v20-specification:
+    name: "Validate the OSCP 2.0 OpenAPI specification"
     runs-on: ubuntu-latest
 
     steps:
@@ -28,4 +27,4 @@ jobs:
       - name: Swagger Editor Validator
         uses: char0n/swagger-editor-validate@v1.3.2
         with:
-          definition-file: ./2.3.0/api/2.3.0.spec.yml
+          definition-file: ./2.0/api/2.0.spec.yml
