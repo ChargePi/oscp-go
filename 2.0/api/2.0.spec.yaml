@@ -1,8 +1,11 @@
-openapi: 3.1.0
+openapi: 3.0.0
 info:
-  title: OSCP API Specification
-  description: OSCP API Specification
-  version: 1.0.0
+  title: OSCP 2.0 API Specification
+  description: OSCP 2.0 API Specification
+  version: 2.0.0
+
+security:
+  - bearerAuth: [ ]
 
 paths:
   /oscp/fp/2.0/register:
@@ -1183,6 +1186,10 @@ paths:
                 $ref: '#/components/schemas/ErrorBody'
 
 components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
 
   headers:
     Authorization:
@@ -1190,11 +1197,13 @@ components:
       schema:
         type: string
       required: true
+
     X-Request-ID:
       description: Unique request ID of this message.
       schema:
         type: string
       required: true
+
     X-Correlation-ID:
       description: Reference to a request ID that this message is a response to.
       schema:
@@ -1226,19 +1235,19 @@ components:
       properties:
         version:
           type: string
-          required: true
           description: Version of the API
         base_url:
           type: string
-          required: true
           description: Base URL of the API
+      required:
+        - version
+        - base_url
 
     RequiredBehaviour:
       type: object
       properties:
         heartbeat_interval:
           type: integer
-          required: false
           description: |
             The interval (in seconds) in which the
             sender of this response expects heartbeats to
@@ -1248,7 +1257,6 @@ components:
 
         measurement_configuration:
           type: array
-          required: false
           description: |
             For determining how measurements are
             aggregated. Providing multiple configurations
@@ -1269,7 +1277,6 @@ components:
         offline_mode_at:
           type: string
           format: date-time
-          required: false
           description: |
             A time in the future that indicates when, in case no more heartbeat
             messages are received, it can be assumed the receiving party is
@@ -1277,18 +1284,17 @@ components:
             heartbeat message.
 
     Registration:
-      schema:
-        type: object
-        properties:
-          token:
-            type: string
-            required: true
-          version_url:
-            type: array
-            items:
-              schema:
-                $ref: '#/components/schemas/VersionURL'
-            required: true
+      type: object
+      properties:
+        token:
+          type: string
+        version_url:
+          type: array
+          items:
+            $ref: '#/components/schemas/VersionURL'
+      required:
+        - token
+        - version_url
 
     CapacityForecastType:
       type: string
@@ -1322,71 +1328,76 @@ components:
       properties:
         capacity:
           type: string
-          required: true
         phase:
           $ref: '#/components/schemas/PhaseIndicator'
-          required: true
         unit:
           $ref: '#/components/schemas/ForecastedBlockUnit'
-          required: true
         end_time:
           type: string
           format: date-time
-          required: true
         start_time:
           type: string
           format: date-time
-          required: true
+      required:
+        - capacity
+        - phase
+        - unit
+        - end_time
+        - start_time
 
     GroupCapacityForecast:
-      schema:
-        type: object
-        properties:
-          group_id:
-            type: string
-            required: true
-          forecasted_blocks:
-            type: array
-            required: true
-            items:
-              $ref: '#/components/schemas/ForecastedBlock'
-          type:
-            $ref: '#/components/schemas/CapacityForecastType'
-            required: true
+      type: object
+      properties:
+        group_id:
+          type: string
+        forecasted_blocks:
+          type: array
+          items:
+            $ref: '#/components/schemas/ForecastedBlock'
+        type:
+          $ref: '#/components/schemas/CapacityForecastType'
+      required:
+        - group_id
+        - forecasted_blocks
+        - type
 
     GroupComplianceError:
       type: object
       properties:
         message:
           type: string
-          required: true
         forecasted_blocks:
           type: array
-          required: false
           items:
             $ref: '#/components/schemas/ForecastedBlock'
+      required:
+        - message
 
     UpdateGroupMeasurements:
       type: object
       properties:
         group_id:
           type: string
-          required: true
         measurements:
           type: array
-          required: true
           items:
             $ref: '#/components/schemas/EnergyMeasurement'
+      required:
+        - group_id
+        - measurements
 
     UpdateAssetMeasurements:
-      group_id:
-        type: string
-        required: true
-      measurements:
-        type: array
-        required: true
-        items:
-          $ref: '#/components/schemas/AssetMeasurement'
+      type: object
+      properties:
+        group_id:
+          type: string
+        measurements:
+          type: array
+          items:
+            $ref: '#/components/schemas/AssetMeasurement'
+      required:
+        - group_id
+        - measurements
 
     EnergyMeasurement:
       type: object
@@ -1394,27 +1405,26 @@ components:
         value:
           type: number
           format: double
-          required: true
         phase:
           $ref: '#/components/schemas/PhaseIndicator'
-          required: true
         unit:
           $ref: '#/components/schemas/EnergyMeasurementUnit'
-          required: true
         energy_type:
           $ref: '#/components/schemas/EnergyType'
-          required: false
         direction:
           $ref: '#/components/schemas/EnergyFlowDirection'
-          required: true
         measure_time:
           type: string
           format: date-time
-          required: true
         initial_measure_time:
           type: string
           format: date-time
-          required: false
+      required:
+        - value
+        - phase
+        - unit
+        - direction
+        - measure_time
 
     EnergyFlowDirection:
       type: string
@@ -1437,23 +1447,20 @@ components:
         - 'KWH'
 
     AssetMeasurement:
+      type: object
       properties:
         asset_id:
           type: string
-          required: true
         asset_category:
           type: string
-          required: true
         energy_measurement:
-          type: object
-          schema:
-            $ref: '#/components/schemas/EnergyMeasurement'
-          required: false
+          $ref: '#/components/schemas/EnergyMeasurement'
         instantaneous_measurement:
-          type: object
-          schema:
-            $ref: '#/components/schemas/InstantaneousMeasurement'
-          required: false
+          $ref: '#/components/schemas/InstantaneousMeasurement'
+      required:
+        - asset_id
+        - asset_category
+
     AssetCategory:
       type: string
       enum:
@@ -1468,17 +1475,18 @@ components:
         value:
           type: number
           format: double
-          required: true
         phase:
           $ref: '#/components/schemas/PhaseIndicator'
-          required: true
         unit:
           $ref: '#/components/schemas/InstantaneousMeasurementUnit'
-          required: true
         measure_time:
           type: string
           format: date-time
-          required: true
+      required:
+        - value
+        - phase
+        - unit
+        - measure_time
 
     InstantaneousMeasurementUnit:
       type: string
