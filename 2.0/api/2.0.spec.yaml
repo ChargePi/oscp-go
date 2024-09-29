@@ -12,31 +12,11 @@ paths:
     post:
       operationId: registerFlexibilityProvider
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/Registration'
       responses:
@@ -64,31 +44,11 @@ paths:
     put:
       operationId: updateRegistrationFlexibilityProvider
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/Registration'
       responses:
@@ -116,31 +76,11 @@ paths:
     delete:
       operationId: unregisterFlexibilityProvider
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/Registration'
       responses:
@@ -169,31 +109,11 @@ paths:
     post:
       operationId: registerCapacityProvider
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/Registration'
       responses:
@@ -221,31 +141,11 @@ paths:
     put:
       operationId: updateRegistrationCapacityProvider
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/Registration'
       responses:
@@ -273,31 +173,11 @@ paths:
     delete:
       operationId: unregisterCapacityProvider
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/Registration'
       responses:
@@ -326,31 +206,11 @@ paths:
     post:
       operationId: registerCapacityOptimizer
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/Registration'
       responses:
@@ -378,31 +238,11 @@ paths:
     put:
       operationId: updateRegistrationCapacityOptimizer
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/Registration'
       responses:
@@ -430,31 +270,11 @@ paths:
     delete:
       operationId: unregisterCapacityOptimizer
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/Registration'
       responses:
@@ -483,31 +303,11 @@ paths:
     post:
       operationId: handshakeFlexibilityProvider
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/Handshake'
       responses:
@@ -536,31 +336,11 @@ paths:
     post:
       operationId: handshakeAcknowledgeFlexibilityProvider
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/HandshakeAcknowledge'
       responses:
@@ -589,31 +369,11 @@ paths:
     post:
       operationId: handshakeCapacityOptimizer
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/Handshake'
       responses:
@@ -642,31 +402,11 @@ paths:
     post:
       operationId: handshakeAcknowledgeCapacityProvider
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/HandshakeAcknowledge'
       responses:
@@ -695,31 +435,11 @@ paths:
     post:
       operationId: heartbeatFlexibilityProvider
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/Heartbeat'
       responses:
@@ -748,31 +468,11 @@ paths:
     post:
       operationId: heartbeatCapacityProvider
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/Heartbeat'
       responses:
@@ -801,31 +501,11 @@ paths:
     post:
       operationId: heartbeatCapacityOptimizer
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/Heartbeat'
       responses:
@@ -854,31 +534,11 @@ paths:
     post:
       operationId: updateGroupCapacityForecastFlexibilityProvider
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/UpdateGroupCapacityForecast'
       responses:
@@ -908,31 +568,11 @@ paths:
     post:
       operationId: updateGroupCapacityForecastCapacityOptimizer
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/UpdateGroupCapacityForecast'
       responses:
@@ -962,31 +602,11 @@ paths:
     post:
       operationId: adjustGroupCapacityForecastCapacityProvider
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/AdjustGroupCapacityForecast'
       responses:
@@ -1015,31 +635,11 @@ paths:
     post:
       operationId: groupCapacityComplianceErrorCapacityProvider
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/GroupCapacityComplianceError'
       responses:
@@ -1069,31 +669,11 @@ paths:
     post:
       operationId: updateGroupMeasurementsCapacityProvider
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/UpdateGroupMeasurements'
       responses:
@@ -1129,31 +709,11 @@ paths:
     post:
       operationId: updateAssetMeasurementsCapacityOptimizer
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/Authorization'
-        - name: X-Request-ID
-          in: header
-          required: true
-          schema:
-            $ref: '#/components/headers/X-Request-ID'
-        - name: X-Correlation-ID
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Correlation-ID'
-        - name: X-Segment-Index
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Index'
-        - name: X-Segment-Count
-          in: header
-          required: false
-          schema:
-            $ref: '#/components/headers/X-Segment-Count'
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/X-Request-ID'
+        - $ref: '#/components/parameters/X-Correlation-ID'
+        - $ref: '#/components/parameters/X-Segment-Index'
+        - $ref: '#/components/parameters/X-Segment-Count'
       requestBody:
         $ref: '#/components/requestBodies/UpdateAssetMeasurements'
       responses:
@@ -1191,37 +751,38 @@ components:
       type: http
       scheme: bearer
 
-  headers:
+  parameters:
     Authorization:
-      description: Authorization header
+      name: Authorization
+      in: header
+      required: true
       schema:
         type: string
-      required: true
-
     X-Request-ID:
-      description: Unique request ID of this message.
-      schema:
-        type: string
+      name: X-Request-ID
+      in: header
       required: true
-
-    X-Correlation-ID:
-      description: Reference to a request ID that this message is a response to.
       schema:
         type: string
+    X-Correlation-ID:
+      name: X-Correlation-ID
+      in: header
       required: false
-
+      schema:
+        type: string
     X-Segment-Index:
-      description: Index of the segment in the message.
+      name: X-Segment-Index
+      in: header
+      required: false
       schema:
         type: integer
-      required: false
-
     X-Segment-Count:
-      description: Total number of segments in the message.
+      name: X-Segment-Count
+      in: header
+      required: false
       schema:
         type: integer
-      required: false
-
+  
   schemas:
 
     ErrorBody:
@@ -1554,34 +1115,3 @@ components:
           schema:
             $ref: '#/components/schemas/UpdateAssetMeasurements'
 
-  responses:
-    204:
-      description: No content
-
-    400:
-      description: Bad request
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ErrorBody'
-
-    404:
-      description: Not found
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ErrorBody'
-
-    500:
-      description: Internal server error
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ErrorBody'
-
-    501:
-      description: Not implemented
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ErrorBody'

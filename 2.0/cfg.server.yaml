@@ -1,5 +1,5 @@
 package: oscp_v20
-output: server.gen.go
+output: server/server.gen.go
 generate:
   models: true
   gin-server: true
