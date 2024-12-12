@@ -9,7 +9,7 @@ a compatible HTTP API server.
 ## Installation
 
 ```bash
- go get github.com/ChargePi/oscp-go@latest"
+ go get github.com/ChargePi/oscp-go@latest
 ```
 
 ## Usage
