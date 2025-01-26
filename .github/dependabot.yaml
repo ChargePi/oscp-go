@@ -3,16 +3,16 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
     assignees:
       - "xBlaz3kx"
     reviewers:
       - "xBlaz3kx"
 
   - package-ecosystem: "gomod"
-    directory: "/"
+    directory: "/2.0/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
     assignees:
       - "xBlaz3kx"
     reviewers:
