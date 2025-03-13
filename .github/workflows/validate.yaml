@@ -19,6 +19,8 @@ jobs:
   validate-v20-specification:
     name: "Validate the OSCP 2.0 OpenAPI specification"
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout
