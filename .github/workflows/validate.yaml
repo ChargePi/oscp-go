@@ -28,3 +28,21 @@ jobs:
         uses: swaggerexpert/swagger-editor-validate@v1
         with:
           definition-file: ./2.0/api/2.0.spec.yaml
+
+      - name: Setup Go
+        if: steps.validate.outcome == 'success'
+        uses: actions/setup-go@v5
+        with:
+          go-version: 1.23.0
+
+      - name: Install Oapi Codegen
+        if: steps.validate.outcome == 'success'
+        working-directory: ./2.0
+        run: |
+          go install github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen@latest
+          go generate ./...
+
+      - name: Push the generated code
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "[Autogen] Generated client and server code from OpenAPI spec"
