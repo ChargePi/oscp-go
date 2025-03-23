@@ -21,12 +21,14 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Swagger Editor Validator
+        id: validate
         uses: swaggerexpert/swagger-editor-validate@v1
         with:
           definition-file: ./2.0/api/2.0.spec.yaml
@@ -46,5 +48,18 @@ jobs:
 
       - name: Push the generated code
         uses: stefanzweifel/git-auto-commit-action@v5
+        if: github.event_name == 'pull_request'
         with:
           commit_message: "[Autogen] Generated client and server code from OpenAPI spec"
+
+      - name: Create a pull request
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "[Autogen] Generated client and server code from OpenAPI spec"
+          title: "[Autogen] OpenAPI client update"
+          body: "OpenAPI client and server were (re)generated from the latest OpenAPI spec."
+          branch: "openapi/autogen-${{ github.sha }}"
+          base: main
+          labels: autogen
