@@ -1,19 +1,24 @@
-# OSCP-go
+# Open smart charging protocol Go SDK
 
-This repository contains a HTTP client (in Go) for OSCP (Open Smart Charging Protocol), which was generated using
-the [oapi-codegen](https://github.com/deepmap/oapi-codegen#overview) generator.
+This repository contains OSCP compatible server and client code, generated with the [oapi-codegen](https://github.com/deepmap/oapi-codegen#overview) generator.
 
-It also contains an OpenAPI specification for OSCP, which is used to generate the client and can be used to generate
-a compatible HTTP API server.
+## Versions
+
+| Version | Supported | Docs                                                          |
+|:--------|:----------|:--------------------------------------------------------------|
+| 2.0   | Yes       | [Link](https://openchargealliance.org/my-oca/oscp/) |
 
 ## Installation
 
 ```bash
- go get github.com/ChargePi/oscp-go@latest
+ go get github.com/ChargePi/oscp-go/<oscp_version>
 ```
 
-## Usage
+# Contributing
 
-```go
-import "github.com/ChargePi/oscp/<oscp-version>"
-```
+Please read [contribution](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull
+requests to the repository.
+
+# License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENCE.md) file for details.
