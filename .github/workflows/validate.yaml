@@ -54,7 +54,7 @@ jobs:
 
       - name: Create a pull request
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "[Autogen] Generated client and server code from OpenAPI spec"
