@@ -6,7 +6,7 @@ toolchain go1.24.1
 
 require (
 	github.com/gin-gonic/gin v1.11.0
-	github.com/oapi-codegen/runtime v1.1.2
+	github.com/oapi-codegen/runtime v1.2.0
 )
 
 require (
